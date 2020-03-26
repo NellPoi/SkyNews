@@ -27,7 +27,7 @@ Begin VB.MDIForm mainForm
       Height          =   10575
       Left            =   0
       ScaleHeight     =   703
-      ScaleMode       =   0  'User
+      ScaleMode       =   3  'Pixel
       ScaleWidth      =   1152
       TabIndex        =   0
       Top             =   0
@@ -77,12 +77,6 @@ Begin VB.MDIForm mainForm
             Width           =   960
          End
       End
-      Begin VB.Timer pushConfig 
-         Enabled         =   0   'False
-         Interval        =   1
-         Left            =   14880
-         Top             =   360
-      End
       Begin VB.Label developer 
          Alignment       =   2  'Center
          Appearance      =   0  'Flat
@@ -100,9 +94,9 @@ Begin VB.MDIForm mainForm
          EndProperty
          ForeColor       =   &H80000008&
          Height          =   600
-         Left            =   16080
+         Left            =   12960
          TabIndex        =   6
-         Top             =   9720
+         Top             =   1560
          Width           =   915
       End
       Begin VB.Label Label2 
@@ -172,16 +166,17 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-Public mainWidth, mainHeight As Variant
-Rem 传递子窗体尺寸定位参数
+
+Private Sub div1_Click()
+    MsgBox developer.Top & Chr(13) & developer.Left
+End Sub
+
 Private Sub MDIForm_Load()
     div1.BorderStyle = 0
     div1_info1.Caption = "Ver" & App.Major & "." & App.Minor & "." & App.Revision
     div1_btn_t.Left = (div1_btn_bg.Width - div1_btn_t.Width) / 2
     div1_btn_t.Top = (div1_btn_bg.Height - div1_btn_t.Height) / 2
-    mainWidth = ScaleWidth
-    mainHeight = ScaleHeight
-    pushConfig.Enabled = True
+    div1.Height = Me.Height
 End Sub
 Private Sub div1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
     div1_btn_bg.BorderStyle = 0
@@ -211,14 +206,8 @@ Private Sub div1_btn_bg_MouseMove(Button As Integer, Shift As Integer, X As Sing
 End Sub
 
 Private Sub MDIForm_Resize()
-    'mainWidth = ScaleWidth
-    'mainHeight = ScaleHeight
-    developer.Left = Me.Width - developer.Width - 300
-    developer.Top = Me.Height - developer.Height - 300
+    developer.Left = div1.ScaleWidth - 80
+    developer.Top = div1.ScaleHeight - 100
     div1.Height = Me.Height
 End Sub
 
-Private Sub pushConfig_Timer()
-    mainWidth = ScaleWidth
-    mainHeight = ScaleHeight
-End Sub
