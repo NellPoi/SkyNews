@@ -3,10 +3,10 @@ Begin VB.MDIForm mainForm
    Appearance      =   0  'Flat
    BackColor       =   &H00FFFFFF&
    Caption         =   "SkyNews"
-   ClientHeight    =   10650
+   ClientHeight    =   11610
    ClientLeft      =   60
    ClientTop       =   405
-   ClientWidth     =   17310
+   ClientWidth     =   18975
    Icon            =   "mainFrom.frx":0000
    LinkTopic       =   "mainForm"
    StartUpPosition =   2  '屏幕中心
@@ -15,8 +15,8 @@ Begin VB.MDIForm mainForm
       Appearance      =   0  'Flat
       BackColor       =   &H80000005&
       BeginProperty Font 
-         Name            =   "微软雅黑"
-         Size            =   9
+         Name            =   "Microsoft YaHei UI"
+         Size            =   15.75
          Charset         =   134
          Weight          =   400
          Underline       =   0   'False
@@ -24,14 +24,37 @@ Begin VB.MDIForm mainForm
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H80000008&
-      Height          =   10575
+      Height          =   11295
       Left            =   0
-      ScaleHeight     =   703
+      ScaleHeight     =   751
       ScaleMode       =   3  'Pixel
-      ScaleWidth      =   1152
+      ScaleWidth      =   1263
       TabIndex        =   0
       Top             =   0
-      Width           =   17310
+      Width           =   18975
+      Begin VB.TextBox Text1 
+         Appearance      =   0  'Flat
+         BorderStyle     =   0  'None
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "Microsoft YaHei UI"
+            Size            =   18
+            Charset         =   134
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000011&
+         Height          =   1575
+         Left            =   1560
+         Locked          =   -1  'True
+         MultiLine       =   -1  'True
+         TabIndex        =   7
+         Text            =   "mainFrom.frx":25CA
+         Top             =   6840
+         Width           =   6855
+      End
       Begin VB.PictureBox div1_btn_bg 
          Appearance      =   0  'Flat
          BackColor       =   &H80000000&
@@ -52,10 +75,10 @@ Begin VB.MDIForm mainForm
          Left            =   1560
          ScaleHeight     =   33
          ScaleMode       =   3  'Pixel
-         ScaleWidth      =   97
+         ScaleWidth      =   105
          TabIndex        =   4
-         Top             =   3960
-         Width           =   1455
+         Top             =   3360
+         Width           =   1575
          Begin VB.Label div1_btn_t 
             AutoSize        =   -1  'True
             BackStyle       =   0  'Transparent
@@ -133,7 +156,7 @@ Begin VB.MDIForm mainForm
             Strikethrough   =   0   'False
          EndProperty
          Height          =   405
-         Left            =   11400
+         Left            =   11280
          TabIndex        =   2
          Top             =   1800
          Width           =   1320
@@ -166,10 +189,6 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-
-Private Sub div1_Click()
-    MsgBox developer.Top & Chr(13) & developer.Left
-End Sub
 
 Private Sub MDIForm_Load()
     div1.BorderStyle = 0
@@ -207,7 +226,13 @@ End Sub
 
 Private Sub MDIForm_Resize()
     developer.Left = div1.ScaleWidth - 80
-    developer.Top = div1.ScaleHeight - 100
+    developer.Top = div1.ScaleHeight - 90
     div1.Height = Me.Height
+    Me.Caption = Me.Width & Me.Height
+    If Me.Width < 14000 Or Me.Height < 9000 Then
+        Me.Width = 14000
+        Me.Height = 10000
+        MsgBox "再小就和丁丁一样小了！", vbCritical
+    End If
 End Sub
 

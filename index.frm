@@ -42,6 +42,28 @@ Begin VB.Form index
       TabIndex        =   12
       Top             =   2280
       Width           =   4695
+      Begin VB.Label Label1 
+         Appearance      =   0  'Flat
+         AutoSize        =   -1  'True
+         BackColor       =   &H80000005&
+         BackStyle       =   0  'Transparent
+         Caption         =   "ËµÃ÷"
+         BeginProperty Font 
+            Name            =   "Î¢ÈíÑÅºÚ"
+            Size            =   10.5
+            Charset         =   134
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000008&
+         Height          =   285
+         Left            =   360
+         TabIndex        =   13
+         Top             =   360
+         Width           =   420
+      End
    End
    Begin VB.PictureBox p1_bg 
       Appearance      =   0  'Flat
