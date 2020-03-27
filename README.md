@@ -5,5 +5,5 @@
 ## Option Explicit 强制显式声明
 与以往不同的是现在所有变量都需声明类型，支持跨窗体调用全局变量
 ## Screenshots
-![Alt text](\Screenshots\TIM截图20200327010429.png)
-![Alt text](\Screenshots\TIM截图20200327010436.png)
+![Alt text](https://github.com/NellPoi/SkyNews/blob/master/Screenshots/main.png?raw=true)
+![Alt text](https://github.com/NellPoi/SkyNews/blob/master/Screenshots/index.png?raw=true)

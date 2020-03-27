@@ -22,6 +22,7 @@ Begin VB.Form index
    ForeColor       =   &H8000000D&
    Icon            =   "index.frx":0000
    LinkTopic       =   "index"
+   LockControls    =   -1  'True
    MaxButton       =   0   'False
    MDIChild        =   -1  'True
    MinButton       =   0   'False
@@ -57,11 +58,11 @@ Begin VB.Form index
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ForeColor       =   &H80000008&
+         ForeColor       =   &H80000011&
          Height          =   285
          Left            =   360
          TabIndex        =   13
-         Top             =   360
+         Top             =   240
          Width           =   420
       End
    End
@@ -80,7 +81,91 @@ Begin VB.Form index
       Begin VB.CheckBox check2 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
-         Caption         =   "Helpshift"
+         Caption         =   "29"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   9
+         Left            =   4680
+         TabIndex        =   20
+         Top             =   1080
+         Width           =   2895
+      End
+      Begin VB.CheckBox check2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "28"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   8
+         Left            =   4680
+         TabIndex        =   19
+         Top             =   720
+         Width           =   2895
+      End
+      Begin VB.CheckBox check2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "27"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   7
+         Left            =   4080
+         TabIndex        =   18
+         Top             =   1800
+         Width           =   2895
+      End
+      Begin VB.CheckBox check2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "26"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   6
+         Left            =   4080
+         TabIndex        =   17
+         Top             =   1440
+         Width           =   2895
+      End
+      Begin VB.CheckBox check2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "25"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   5
+         Left            =   4080
+         TabIndex        =   16
+         Top             =   1080
+         Width           =   2895
+      End
+      Begin VB.CheckBox check2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "24"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   4
+         Left            =   4080
+         TabIndex        =   15
+         Top             =   720
+         Width           =   2895
+      End
+      Begin VB.CheckBox check1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "----"
+         ForeColor       =   &H80000008&
+         Height          =   375
+         Index           =   2
+         Left            =   600
+         TabIndex        =   14
+         Top             =   1440
+         Width           =   2415
+      End
+      Begin VB.CheckBox check2 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         Caption         =   "23"
          ForeColor       =   &H80000008&
          Height          =   375
          Index           =   3
@@ -92,7 +177,7 @@ Begin VB.Form index
       Begin VB.CheckBox check2 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
-         Caption         =   "官方网站"
+         Caption         =   "22"
          ForeColor       =   &H80000008&
          Height          =   375
          Index           =   2
@@ -104,7 +189,7 @@ Begin VB.Form index
       Begin VB.CheckBox check2 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
-         Caption         =   "推特Twitter"
+         Caption         =   "21"
          ForeColor       =   &H80000008&
          Height          =   375
          Index           =   1
@@ -116,7 +201,7 @@ Begin VB.Form index
       Begin VB.CheckBox check2 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
-         Caption         =   "Discord"
+         Caption         =   "20"
          ForeColor       =   &H80000008&
          Height          =   375
          Index           =   0
@@ -128,26 +213,26 @@ Begin VB.Form index
       Begin VB.CheckBox check1 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
-         Caption         =   "官方微博"
+         Caption         =   "----"
          ForeColor       =   &H80000008&
          Height          =   375
          Index           =   1
          Left            =   600
          TabIndex        =   6
-         Top             =   720
-         Width           =   2895
+         Top             =   1080
+         Width           =   2415
       End
       Begin VB.CheckBox check1 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
-         Caption         =   "官方网站"
+         Caption         =   "----"
          ForeColor       =   &H80000008&
          Height          =   375
          Index           =   0
          Left            =   600
          TabIndex        =   5
-         Top             =   1080
-         Width           =   2895
+         Top             =   720
+         Width           =   2415
       End
       Begin VB.Line Line3 
          BorderColor     =   &H80000000&
@@ -192,7 +277,7 @@ Begin VB.Form index
       Enabled         =   0   'False
       Interval        =   10
       Left            =   120
-      Top             =   120
+      Top             =   720
    End
    Begin VB.Line Line2 
       BorderColor     =   &H80000000&
@@ -201,7 +286,7 @@ Begin VB.Form index
       Y1              =   128
       Y2              =   504
    End
-   Begin VB.Line Line_Type2 
+   Begin VB.Line line_Type2 
       BorderColor     =   &H8000000D&
       BorderWidth     =   2
       X1              =   112
@@ -292,22 +377,28 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-Private Sub Command1_Click()
-Dim a As Integer
-a = InputBox("width" & p1_bg.Width & Chr(13) & index.Width, "植入参数")
-p1_bg.Width = Val(a)
-checkUI.Enabled = False
+Private Sub Form_Click()
+    Dim tt, ttt As String, ts As Variant
+    For ts = 0 To check2.Count - 1 Step 1
+    ttt = check2(ts).Left
+    tt = tt & check2(ts).Caption & "————" & ttt & "————" & check2(ts).Visible & "————" & check2(ts).Value & Chr(13)
+    Next ts
+    MsgBox "发现新大陆了？这只是一个调试窗口而已" & Chr(13) & tt & Chr(13) & "CONSOLE===>" & check2.Count
 End Sub
 
 Private Sub Form_Load()
     checkUI.Enabled = True
     Dim i, n As Integer
         For i = 0 To check1.Count - 1 Step 1
+            Rem 负责加载 国服 数列
             check1(i).BackColor = RGB(251, 251, 251)
+            check1(i).Caption = LoadResString(100 + i)
         Next i
-    Line_Type2.Visible = False
+    line_Type2.Visible = False
         For n = 0 To check2.Count - 1 Step 1
+            Rem 负责加载 国际服 数列
             check2(n).BackColor = RGB(251, 251, 251)
+            check2(n).Caption = LoadResString(200 + n)
             check2(n).Visible = False
         Next n
     p1_bg.BorderStyle = 0
@@ -326,30 +417,19 @@ Private Sub checkUI_Timer()
     Line2.X2 = p2_bg.Left - p2_paddingVal
     Line2.Y2 = Me.Height
     Line3.X2 = p1_bg.Width
-    p1_bg.Width = Line2.X1 - (Line2.X1 / 100 * 15) '使p1_bg宽度能动态的调整，而不是僵硬的变化
+    p1_bg.Width = Line2.X1 - (Line2.X1 / 100 * 15)
+    '使p1_bg宽度能动态的调整，而不是僵硬的变化，注意，拉伸范围过大会导致参数错误崩溃
     p2_bg.Top = Line1.Y1 + p2_paddingVal
     p2_bg.Left = ScaleWidth - 300
     p2_bg.Height = ScaleHeight - p2_bg.Top - p2_paddingVal
     p2_bg.Width = ScaleWidth - p2_bg.Left - p2_paddingVal
-    'index.Width = mainForm.mainWidth
-    'index.Height = mainForm.mainHeight
-    'Line1.X2 = mainForm.mainWidth
-    'devMode.Left = 200
-    'Line2.X1 = p2_bg.Left - 300
-    'Line2.X2 = p2_bg.Left - 300
-    'Line2.Y2 = Me.Height
-    'Line3.X2 = p1_bg.Width
-    'p1_bg.Width = Line2.X1 / 100 * 85
-    'p2_bg.Left = Me.Width - 300
-    'p2_bg.Height = Me.Height - p1_bg.Top - 300
-    'p2_bg.Width = Me.Width / 100 * 30
 End Sub
 
 Private Sub div2_type1_Click()
     title_Type = "国服"
     Dim i, n As Integer
     line_Type1.Visible = True
-    Line_Type2.Visible = False
+    line_Type2.Visible = False
     For i = 0 To check1.Count - 1 Step 1
         check1(i).Visible = True
     Next i
@@ -360,16 +440,43 @@ End Sub
 
 Private Sub div2_type2_Click()
     title_Type = "国际服"
-    Dim i, n As Integer
+    Dim i, n, row As Integer
     line_Type1.Visible = False
-    Line_Type2.Visible = True
+    line_Type2.Visible = True
     For i = 0 To check1.Count - 1 Step 1
         check1(i).Visible = False
+        check1(row).Left = 40
     Next i
-    For n = 0 To check2.Count - 1 Step 1
-        check2(n).Visible = True
-        check2(n).Left = 600
+    Dim col As Variant
+    If check2.Count / 4 <> 0 Then
+        col = check2.Count + 1
+    Else
+        col = check2.Count
+    End If
+    For n = 0 To col Step 1
+        For row = 0 To 3 Step 1
+            If n = 0 Then
+            check2(row).Left = 40
+            check2(row).Visible = True
+            ElseIf n > 0 Then
+            If row + n * 3 + 1 > check2.Count - 1 Then
+                Exit For
+            End If
+            check2(row + n * 3 + 1).Left = 130 * (n + 1)
+            check2(row + n * 3 + 1).Visible = True
+            End If
+        Next row
     Next n
+    'For n = 0 To check2.Count / 4 Step 1
+    '   If n Mod 4 = 0 Then
+    '        Dim nn As Variant
+    '        For nn = n To n + 3 Step 1
+    '        check2(nn).Caption = LoadResString(200 + n)
+    '        Next nn
+    '    End If
+    '    check2(n).Visible = True
+    '    check2(n).Left = 40
+    'Next n
 End Sub
 Private Sub devMode_Click()
     If devMode.Value = 1 Then
@@ -385,5 +492,3 @@ Private Sub devMode_Click()
     Else
     End If
 End Sub
-
-
